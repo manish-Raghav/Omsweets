@@ -2,6 +2,10 @@
  import img from '../assets/oms.png'
  import img2 from '../assets/om.png'
 import { Link } from 'react-router-dom'
+import Badge from '@mui/material/Badge';
+import Cart from '../Pages/Cart';
+
+
  
  const Header = () => {
    return (
@@ -36,14 +40,22 @@ import { Link } from 'react-router-dom'
 
 
               </nav>
+              <Link to="/Cart">
                  <div className='relative cursor-pointer'>
-                 <img src={img2} alt='img2' className='h-10'  />
-                 <div className='absolut bg-lime-400 text-lg '>
-                  0
-                 </div>
-                 </div>
+                 <Badge badgeContent={3} color="success">
+                 <img  src={img2} alt='img2' className='h-10'  />
+                  </Badge>   
+                 
+
+
                 
-            </div>           
+                 
+                 </div>
+                 </Link>
+           </div>  
+                   
+                
+                            
         </div>
         
      

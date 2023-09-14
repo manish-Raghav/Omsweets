@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import Mycard from '../Components/Mycard';
+import DiffCard from '../Components/diffCard';
+
+
 
 
 const Sweet = () => {
   const [ast ,setast] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:4000/Sweet')
+    axios.get('http://localhost:4000/all')
     .then(res =>{
-      console.log(res.data);
       setast(res.data);
     })
     .catch(err=>{
@@ -17,9 +18,9 @@ const Sweet = () => {
   },[])
 
   return (
-    <div>
+    <div className='flex  w-screen items-center '> 
         
-    <Mycard mani={ast} />
+    <DiffCard mani = {ast} />
     </div>
   )
 }

@@ -35,8 +35,8 @@ const Upload = () => {
     
 
   return (
-    <div>
-    <div>
+    <div className=' flex flex-col w-full h-full'>
+    <div className='mt-28'>
     <label >Product_nmae</label>
       <input type='text' onChange={e=>setpro(e.target.value)} />
       </div>
