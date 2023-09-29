@@ -4,10 +4,13 @@
 import { Link } from 'react-router-dom'
 import Badge from '@mui/material/Badge';
 import Cart from '../Pages/Cart';
+import { useSelector } from 'react-redux'
 
 
  
  const Header = () => {
+
+   const data= useSelector((stat) => stat.productcart.cartItem);
    return (
      <header className='fixed shadow-md w-full h-16 md:px-4 z-50 bg-white'>
         
@@ -42,7 +45,7 @@ import Cart from '../Pages/Cart';
               </nav>
               <Link to="/Cart">
                  <div className='relative cursor-pointer'>
-                 <Badge badgeContent={3} color="success">
+                 <Badge badgeContent={data.length} color="success">
                  <img  src={img2} alt='img2' className='h-10'  />
                   </Badge>   
                  

@@ -1,40 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { useSelector } from 'react-redux';
+import Mycard from '../Components/Mycard';
+import Footer from '../Components/Footer';
 const Bakerie = () => {
-  const [abak ,setabak] = useState([]);
-    useEffect(()=>{
-      axios.get('http://localhost:4000/bak')
-      .then(res =>{
-        console.log(res.data);
-        setabak(res.data);
-      })
-      .catch(err=>{
-        console.log(err);
-      })
-    },[])
+  const [ast ,setast] = useState([]);
+
+  const swet = useSelector((stat) => stat.productcart.productList);
+  useEffect(()=>{
+    // axios.get('http://localhost:4000/all')
+    // .then(res =>{
+    //   setast(res.data);
+  setast( swet.filter((item) => item.product_name ==="bakeries" ))
+
+  
+  },[swet])
+  // console.log(ast);
   return (
-    <div>
-      {abak.map((val)=>{
-        return(
-          <div>
-          <h4>
-            {val.product_name}
-          </h4>
-          <h4>
-            {val.Name}
-          </h4>
-          <h4>
-            {val.quantity}
-          </h4>
-             
-          <h4>
-            {val.prise}
-          </h4>
+    <div className='flex flex-col w-screen items-center '> 
+    <div className='flex justify-center mt-16 mx-8   gap-2 flex-wrap  max-w-full '>
+       {
+      ast.map((el, index) => {
+                return (
+                  <Mycard
+                 
+                    id={el._id}
+                    name={el.Name}
+                    catego={el.product_name}
+                    price={el.prise}
+                    image={el.img1}
+                    quant ={el.quantity}
+                  />
+                );
+              })
+     }
+       </div>
 
-          </div>
-
-        )
-      })}
+       <div className='mt-20 w-screen'>
+    <Footer/>
+    </div>
     </div>
   )
 }

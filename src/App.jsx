@@ -9,6 +9,7 @@ import Chocolate from './Pages/Chocolate'
 import Upload from './Pages/Upload'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from './Pages/Cart'
+import Footer from './Components/Footer'
 
 
  
@@ -32,6 +33,7 @@ function App() {
       <Route path="/Cart" element={<Cart/>} />
     </Routes>
     </div>
+    
     </div>
   )
 }

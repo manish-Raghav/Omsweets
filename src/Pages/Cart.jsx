@@ -1,38 +1,61 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import Cartproduct from '../Components/Cartproduct'
+
 
 
 const Cart = () => {
     console.log('we are hre in cart')
+     
+     const data= useSelector((stat) => stat.productcart.cartItem);
+     console.log("ha ha ha ha ha  ==>" ,data);
+
+     const totalPrice = data.reduce(
+      (acc, curr) => acc + parseInt(curr.total),
+      0
+    );
+    const totalQty = data.reduce(
+      (acc, curr) => acc + parseInt(curr.qty),
+      0
+    );
+
+    const handlePayment = ()=>{
+
+    }
   return (
-    <>
+    <div className=' flex flex-row w-full h-full '>
     
-      <div className="p-2 md:p-4">
+       <div className=" mt-9 p-2 md:p-4">
         <h2 className="text-lg md:text-2xl font-bold text-slate-600">
           Your Cart Items
         </h2>
 
-        {productCartItem[0] ?
+        {data[0] ?
         <div className="my-4 flex gap-3">
-          {/* display cart items  */}
+          display cart items 
+        
           <div className="w-full max-w-3xl ">
-            {productCartItem.map((el) => {
+            {data.map((el) => {
               return (
-                <CartProduct
+                <Cartproduct
                   key={el._id}
                   id={el._id}
                   name={el.name}
-                  image={el.image}
-                  category={el.category}
+                  image={el.img}
+                  catego={el.catego}
                   qty={el.qty}
                   total={el.total}
                   price={el.price}
+                  quant={el.quant}
                 />
               );
             })}
           </div>
 
           {/* total cart item  */}
-          <div className="w-full max-w-md  ml-auto">
+
+          
+          <div className="w-full max-w-md ml-auto">
             <h2 className="bg-blue-500 text-white p-2 text-lg">Summary</h2>
             <div className="flex w-full py-2 text-lg border-b">
               <p>Total Qty :</p>
@@ -53,14 +76,14 @@ const Cart = () => {
         : 
         <>
           <div className="flex w-full justify-center items-center flex-col">
-            <img src={emptyCartImage} className="w-full max-w-sm"/>
+            {/* <img src={emptyCartImage} className="w-full max-w-sm"/> */}
             <p className="text-slate-500 text-3xl font-bold">Empty Cart</p>
           </div>
         </>
       }
-      </div>
+      </div> 
     
-    </>
+    </div>
   )
 }
 
