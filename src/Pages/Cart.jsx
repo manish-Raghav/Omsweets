@@ -8,7 +8,7 @@ const Cart = () => {
     console.log('we are hre in cart')
      
      const data= useSelector((stat) => stat.productcart.cartItem);
-     console.log("ha ha ha ha ha  ==>" ,data);
+   //  console.log("ha ha ha ha ha  ==>" ,data);
 
      const totalPrice = data.reduce(
       (acc, curr) => acc + parseInt(curr.total),
@@ -23,19 +23,20 @@ const Cart = () => {
 
     }
   return (
-    <div className=' flex flex-row w-full h-full '>
-    
-       <div className=" mt-9 p-2 md:p-4">
+    <div className=' flex justify-center flex-row w-full h-full '>
+        <div  className=' mt-20 mx-6  border-2 border-teal-400 border-solid'>
+       <div className="  flex justify-center p-2 md:p-4">
         <h2 className="text-lg md:text-2xl font-bold text-slate-600">
           Your Cart Items
         </h2>
+        </div>
 
         {data[0] ?
-        <div className="my-4 flex gap-3">
-          display cart items 
+        <div className=" flex  gap-4 ">
+           
         
-          <div className="w-full max-w-3xl ">
-            {data.map((el) => {
+          <div className="  w-full max-w-3xl border-2 border-solid border-orange-400 ">
+             {data.map((el) => {
               return (
                 <Cartproduct
                   key={el._id}
@@ -55,7 +56,7 @@ const Cart = () => {
           {/* total cart item  */}
 
           
-          <div className="w-full max-w-md ml-auto">
+          <div className="w-full max-w-md ml-14 border-2 border-solid border-fuchsia-700">
             <h2 className="bg-blue-500 text-white p-2 text-lg">Summary</h2>
             <div className="flex w-full py-2 text-lg border-b">
               <p>Total Qty :</p>
@@ -71,6 +72,10 @@ const Cart = () => {
               Payment
             </button>
           </div>
+
+
+
+
         </div>
 
         : 

@@ -4,6 +4,7 @@
 import { Link } from 'react-router-dom'
 import Badge from '@mui/material/Badge';
 import Cart from '../Pages/Cart';
+import {FaUser} from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 
 
@@ -12,7 +13,7 @@ import { useSelector } from 'react-redux'
 
    const data= useSelector((stat) => stat.productcart.cartItem);
    return (
-     <header className='fixed shadow-md w-full h-16 md:px-4 z-50 bg-white'>
+     <header className='fixed shadow-md w-full h-20 md:px-4 z-50 bg-white'>
         
             <div className=' flex items-center h-full justify-between'>
              <Link to="/" >
@@ -21,40 +22,45 @@ import { useSelector } from 'react-redux'
                 </div>
                 </Link>
                
-                   <div className='flex items-center gap-4 md:gap-7'>
+                   <div className=' mt-2 mr-6 flex items-center gap-4 md:gap-7'>
                    <nav className=' flex gap-4 md:gap-6 text-base md:text-lg '>
 
                   
-                <Link to='/'>HOME</Link>
+                <Link to='/' className='font-serif text-xl'>HOME</Link>
                
-                <Link to='/Sweet'>SWEET</Link>
+                <Link to='/Sweet ' className='font-serif text-xl'>SWEET</Link>
                
-                <Link to='/Bakerie'>BAKERIES</Link>
-                <Link to='/Chocolate'>CHOCOLATES</Link>
-                <Link to='/Food'>FOODS</Link>
-                <Link to='/Upload'>Upload</Link>
-               
-            
-             
-       
+                <Link to='/Bakerie' className='font-serif text-xl'>BAKERIES</Link>
+                <Link to='/Chocolate'className='font-serif text-xl'>CHOCOLATES</Link>
+                <Link to='/Food'className='font-serif text-xl'>FOODS</Link>
+      
 
 
-
-
-
-              </nav>
+                    
               <Link to="/Cart">
-                 <div className='relative cursor-pointer'>
-                 <Badge badgeContent={data.length} color="success">
+                 <div className='relative cursor-pointer '>
+                 <Badge badgeContent={1-1} color="success">
                  <img  src={img2} alt='img2' className='h-10'  />
                   </Badge>   
-                 
-
-
-                
+              
                  
                  </div>
                  </Link>
+
+                 <Link to='/Login'>
+                 <div className='relative cursor-pointer p-2'>
+                 <FaUser />   
+                   </div>
+                 </Link>
+
+               
+         
+
+              </nav>
+
+     
+
+            
            </div>  
                    
                 

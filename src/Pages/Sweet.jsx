@@ -24,7 +24,7 @@ const Sweet = () => {
   },[swet])
    
   return (
-    <div className='flex flex-col w-screen items-center '> 
+    <div className='flex flex-col h-screen w-screen items-center '> 
        <div className='flex justify-center mt-16 mx-8   gap-2 flex-wrap  max-w-full '>
        {
       ast.map((el, index) => {
@@ -42,9 +42,9 @@ const Sweet = () => {
               })
      }
        </div>
-       <div className='mt-20 w-screen'>
-    <Footer/>
-    </div>
+       <div className='h-screen w-screen '>
+       <Footer/>
+       </div>
     </div>
   )
 }

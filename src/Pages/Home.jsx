@@ -74,14 +74,16 @@ const Home = () => {
      </div>
     <div className='flex flex-col justify-center mt-11  '>
 
-    <div className='flex flex-row justify-between' >
-      <div className=' flex  mx-5'>
-       <h1 className='text-3xl font-medium text-slate-800 ' >ALL PRODUCTS </h1>
+    <div className='flex flex-row justify-center' >
+    <hr className='mt-4 md:w-96 h-1 bg-red-900' />
+       <div className=' flex  '> 
+       <h1 className='text-3xl  font-bold text-red-900 pr-2 ' >All </h1>
+       <h1 className='text-3xl font-thin text-red-900 ' > Products </h1>
      </div>
-     
+     <hr className='mt-4 md:w-96 h-1 bg-red-900' />
      </div>
     
-     <div className=' flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all border-b-2 border-red-500 border-solid' 
+     <div className=' flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all ' 
             ref={slideproduct}>
     
      <div className=' w-full  mt-28 absolute z-20 flex justify-between'>
@@ -112,15 +114,19 @@ const Home = () => {
      </div>
        
      
-     <div className='flex  flex-row justify-between mt-6' >
-      <div className=' flex  mx-5'>
-       <h1 className='text-3xl font-medium text-slate-800 ' >SWEETS</h1>
+     <div className=' pt-5 flex flex-row justify-center' >
+    <hr className='mt-4 md:w-96 h-1 bg-red-900' />
+       <div className=' flex   '> 
+       <h1 className='text-3xl  font-bold text-red-900 pr-2 ' >New  </h1>
+       <h1 className='text-3xl font-thin text-red-900 ' > Products </h1>
      </div>
-    
+     <hr className='mt-4 md:w-96 h-1 bg-red-900' />
      </div>
+       
+     
     
 
-      <div className='flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all border-b-2 border-red-500 border-solid'  ref={slideproduct}>
+      <div className='flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all '  ref={slideproduct}>
       
       <div className=' w-full  mt-28 absolute z-20 flex justify-between'>
      <div className=' '>
@@ -152,15 +158,21 @@ const Home = () => {
 
 
 
-     <div className='flex  flex-row justify-between mt-6' >
-      <div className=' flex  mx-5'>
-       <h1 className='text-3xl font-medium text-slate-800 ' >Bakries</h1>
+     <div className=' pt-5 flex flex-row justify-center' >
+    <hr className='mt-4 md:w-96 h-1  bg-red-900' />
+       <div className=' flex  '> 
+       <h1 className='ml-3 mr-3 text-3xl font-normal text-red-900 '>SWEET'S</h1>
      </div>
-    
+     <hr className='mt-4 md:w-96 h-1 bg-red-900' />
      </div>
-    
+       
 
-      <div className='flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all border-b-2 border-red-500 border-solid'  ref={slideproduct}>
+      
+
+      
+     
+
+      <div className='flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all '  ref={slideproduct}>
       
       <div className=' w-full  mt-28 absolute z-20 flex justify-between'>
      <div className=' '>
