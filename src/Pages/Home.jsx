@@ -4,10 +4,12 @@ import React, { useEffect, useRef, useState } from 'react'
 import gv from '../assets/gv2.jpeg'
 import Sweet from './Sweet';
 import Mycard from '../Components/Mycard';
- import { GrPrevious,GrNext } from 'react-icons/gr';
+import { GrPrevious,GrNext } from 'react-icons/gr';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataProduct } from '../reduxstore/productslice';
 import Footer from '../Components/Footer';
+import MainCarousel from '../Carousel/MainCarousel';
+import Homesectioncaro from '../Components/Homesectioncaro';
 
 
 
@@ -20,21 +22,21 @@ const Home = () => {
     const [arr ,setarr] = useState([]);
     const [sw ,setsw] = useState([]);
 
-     const usedisp = useDispatch()
+    // const usedisp = useDispatch()
 
     
-    useEffect(()=>{
-      axios.get('http://localhost:4000/all')
-      .then(res =>{
-         usedisp(setDataProduct(res.data));
+    // useEffect(()=>{
+    //   axios.get('http://localhost:4000/all')
+    //   .then(res =>{
+    //      usedisp(setDataProduct(res.data));
          
-        // setarr(res.data);
+    //     // setarr(res.data);
 
-      })
-      .catch(err=>{
-        console.log(err);
-      })
-    },[])
+    //   })
+    //   .catch(err=>{
+    //     console.log(err);
+    //   })
+    // },[])
        
          
     const setm = useSelector((stm) =>stm.productcart.productList);
@@ -47,15 +49,15 @@ const Home = () => {
       
      
     
-    // useEffect(()=>{
-    //   axios.get('http://localhost:4000/Sweet')
-    //   .then(res =>{
-    //     setsw(res.data);
-    //   })
-    //   .catch(err=>{
-    //     console.log(err);
-    //   })
-    // },[])
+    useEffect(()=>{
+      axios.get('http://localhost:4000/Sweet')
+      .then(res =>{
+        setsw(res.data);
+      })
+      .catch(err=>{
+        console.log(err);
+      })
+    },[])
     const slideproduct = useRef()
 
     const nextd = ()=>{
@@ -69,10 +71,14 @@ const Home = () => {
   return (
     <div className='flex flex-col  '> 
      
-     <div>
-        <img className=' h-60 w-screen bg-cover' src="" />
+     <div className='mt-[5rem] w-full'>
+      <MainCarousel />
      </div>
-    <div className='flex flex-col justify-center mt-11  '>
+
+
+
+
+    <div className='flex  flex-col justify-center mt-11  '>
 
     <div className='flex flex-row justify-center' >
     <hr className='mt-4 md:w-96 h-1 bg-red-900' />
@@ -82,19 +88,28 @@ const Home = () => {
      </div>
      <hr className='mt-4 md:w-96 h-1 bg-red-900' />
      </div>
+
+
+     {/* <div>
+       <Homesectioncaro />
+     </div> */}
     
-     <div className=' flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all ' 
+     <div className='  sm:w-auto md:w-[78rem] h-[19rem] md:relative left-16 flex flex-row mt-3   overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all border-[1px] border-black ' 
             ref={slideproduct}>
     
-     <div className=' w-full  mt-28 absolute z-20 flex justify-between'>
-     <div className=' '>
-     <button className='text-3xl font-bold' onClick={privious} ><GrPrevious/></button>
+
+
+
+    <div className='  w-full  mt-28 absolute z-20 flex justify-between'>
+     <div className='absolute  z-40 top-[1.2rem]  '>
+     <button className='text-3xl font-bold bg-red-600 hover:bg-amber-400 rounded-md' onClick={privious} ><GrPrevious/></button>
      </div>
 
-     <div className= ''>
-     <button className='text-3xl font-bold ' onClick={nextd}  ><GrNext /></button>
+     <div className= 'sm:invisible md:visible absolute right-[0rem] top-[1.2rem] z-30'>
+     <button className='text-3xl font-bold  bg-red-600 hover:bg-amber-400 rounded-md ' onClick={nextd}  ><GrNext /></button>
      </div>
      </div>
+     
      {
       setm.map((el, index) => {
                 return (
@@ -112,6 +127,11 @@ const Home = () => {
      }
     
      </div>
+
+
+
+
+
        
      
      <div className=' pt-5 flex flex-row justify-center' >
@@ -126,17 +146,19 @@ const Home = () => {
      
     
 
-      <div className='flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all '  ref={slideproduct}>
-      
-      <div className=' w-full  mt-28 absolute z-20 flex justify-between'>
-     <div className=' '>
-     <button className='text-3xl font-bold' onClick={privious} ><GrPrevious/></button>
+     <div className='  sm:w-auto md:w-[78rem] h-[19rem] md:relative left-16 flex flex-row mt-3   overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all border-[1px] border-black ' 
+            ref={slideproduct}>
+    
+
+
+
+     <div className='  w-full  mt-28 absolute z-20 flex justify-between'>
+     <div className='absolute  z-40 top-[1.2rem]  '>
+     <button className='text-3xl font-bold bg-red-600 hover:bg-amber-400 rounded-md' onClick={privious} ><GrPrevious/></button>
      </div>
 
-     
-
-     <div className= ''>
-     <button className='text-3xl font-bold ' onClick={nextd}  ><GrNext /></button>
+     <div className= 'sm:invisible md:visible absolute right-[0rem] top-[1.2rem] z-30'>
+     <button className='text-3xl font-bold  bg-red-600 hover:bg-amber-400 rounded-md ' onClick={nextd}  ><GrNext /></button>
      </div>
      </div>
      {
@@ -172,17 +194,20 @@ const Home = () => {
       
      
 
-      <div className='flex flex-row mt-3 gap-3 overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all '  ref={slideproduct}>
-      
-      <div className=' w-full  mt-28 absolute z-20 flex justify-between'>
-     <div className=' '>
-     <button className='text-3xl font-bold' onClick={privious} ><GrPrevious/></button>
+     <div className='  sm:w-auto md:w-[78rem] h-[19rem] md:relative left-16 flex flex-row mt-3   overflow-scroll overflow-y-hidden scrollbar-none scroll-smooth transition-all border-[1px] border-black ' >
+       
+            
+    
+
+
+
+     <div className='  w-full  mt-28 absolute z-20 flex justify-between'>
+     <div className='absolute  z-40 top-[1.2rem]  '>
+     <button className='text-3xl font-bold bg-red-600 hover:bg-amber-400 rounded-md' onClick={privious} ><GrPrevious/></button>
      </div>
 
-     
-
-     <div className= ''>
-     <button className='text-3xl font-bold ' onClick={nextd}  ><GrNext /></button>
+     <div className= 'sm:invisible md:visible absolute right-[0rem] top-[1.2rem] z-30'>
+     <button className='text-3xl font-bold  bg-red-600 hover:bg-amber-400 rounded-md ' onClick={nextd}  ><GrNext /></button>
      </div>
      </div>
      {
@@ -203,11 +228,13 @@ const Home = () => {
      </div>
 
     </div>
+
     <div className='mt-20'>
     <Footer />
     </div>
       
     </div>
+    
   )
 }
 

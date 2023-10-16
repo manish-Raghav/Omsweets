@@ -17,8 +17,8 @@ const Bakerie = () => {
   },[swet])
   // console.log(ast);
   return (
-    <div className='flex flex-col w-screen items-center '> 
-    <div className='flex justify-center mt-16 mx-8   gap-2 flex-wrap  max-w-full '>
+    <div className='flex flex-col  '> 
+    <div className='flex justify-center mt-16 mx-8   gap-2 flex-wrap '>
        {
       ast.map((el, index) => {
                 return (
@@ -36,7 +36,7 @@ const Bakerie = () => {
      }
        </div>
 
-       <div className='mt-20 w-screen'>
+       <div className='mt-20 w-full'>
     <Footer/>
     </div>
     </div>

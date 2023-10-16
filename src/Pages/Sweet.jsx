@@ -14,20 +14,20 @@ const Sweet = () => {
   const [ast ,setast] = useState([]);
 
   const swet = useSelector((stat) => stat.productcart.productList);
-  useEffect(()=>{
-    // axios.get('http://localhost:4000/all')
-    // .then(res =>{
-    //   setast(res.data);
-  setast( swet.filter((item) => item.product_name ==="sweet" ))
+  // useEffect(()=>{
+  //   // axios.get('http://localhost:4000/all')
+  //   // .then(res =>{
+  //   //   setast(res.data);
+  // setast( swet.filter((item) => item.product_name ==="sweet" ))
 
   
-  },[swet])
+  // },[swet])
    
   return (
     <div className='flex flex-col h-screen w-screen items-center '> 
-       <div className='flex justify-center mt-16 mx-8   gap-2 flex-wrap  max-w-full '>
+       <div className='flex justify-center mt-16 md:mx-8   gap-2 flex-wrap  max-w-full '>
        {
-      ast.map((el, index) => {
+      swet.map((el, index) => {
                 return (
                   <Mycard
                  
@@ -42,7 +42,7 @@ const Sweet = () => {
               })
      }
        </div>
-       <div className='h-screen w-screen '>
+       <div className=' relative top-24 w-full '>
        <Footer/>
        </div>
     </div>

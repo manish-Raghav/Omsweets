@@ -39,7 +39,7 @@ import { useSelector } from 'react-redux'
                     
               <Link to="/Cart">
                  <div className='relative cursor-pointer '>
-                 <Badge badgeContent={1-1} color="success">
+                 <Badge badgeContent={data.length} color="success">
                  <img  src={img2} alt='img2' className='h-10'  />
                   </Badge>   
               
@@ -47,7 +47,7 @@ import { useSelector } from 'react-redux'
                  </div>
                  </Link>
 
-                 <Link to='/Login'>
+                 <Link to='/upload'>
                  <div className='relative cursor-pointer p-2'>
                  <FaUser />   
                    </div>
