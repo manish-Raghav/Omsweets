@@ -14,13 +14,13 @@ const Homesectioncaro = () => {
     720: { items: 3 },
     1024: { items: 5.5 },
 };
- const setm = useSelector((stm) =>stm.productcart.productList);
- var items= "";
+//  const setm = useSelector((stm) =>stm.productcart.productList);
+//  var items= "";
 
   return(
   
   <div>
-  
+{/*   
    {items = setm.map((el, index) => {
       
     <Mycard
@@ -33,10 +33,10 @@ const Homesectioncaro = () => {
     />
    
  
-})}
+})} */}
   
         <AliceCarousel
-         items={items}
+         items={<Mycard />}
          disableButtonsControls
          autoPlay
          autoPlayInterval={1000}

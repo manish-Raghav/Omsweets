@@ -71,7 +71,7 @@ const Home = () => {
   return (
     <div className='flex flex-col  '> 
      
-     <div className='mt-[5rem] w-full'>
+     <div className='mt-[4.1rem] w-full'>
       <MainCarousel />
      </div>
 

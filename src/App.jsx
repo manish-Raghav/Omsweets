@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios';
 import { Route, Routes } from 'react-router-dom'
-import Header from './Components/Header'
+  
 import Home from './Pages/Home'
 import Sweet from './Pages/Sweet'
 import Bakerie from './Pages/Bakerie'
@@ -13,6 +13,7 @@ import Cart from './Pages/Cart'
 import Footer from './Components/Footer'
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataProduct } from './reduxstore/productslice';
+import Header from './Components/Header/Header';
 
 // import Login from './Pages/Login'
 

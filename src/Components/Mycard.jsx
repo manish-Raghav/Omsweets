@@ -65,12 +65,12 @@ const Mycard = ({ id, name, image,catego, price , quant}) => {
 
 
      <div className=' '> 
-       <Card className='w-56  hover:border-1  hover:border-solid  hover:border-black hover: cursor-pointer'  >
+       <Card className=' sm:w-20 md:w-56  hover:border-1  hover:border-solid  hover:border-black hover: cursor-pointer'  >
        <div className='flex justify-center py-1'>
-      <Card.Img className='w-52 h-28' src={`http://localhost:4000/${image}`} />
+      <Card.Img className=' md:w-52 h-28 sm:w-3' src={`http://localhost:4000/${image}`} />
       </div>
-      <div className='absolute top-2 left-3 bg-red-500 rounded-sm'>
-        <h5 className='text-slate-200'>-₹20%</h5>
+      <div className='absolute top-2 left-3 bg-red-600 rounded-sm'>
+        <h5 className='text-slate-200 text-base'>-₹20%</h5>
       </div>
       <Card.Body>
 
