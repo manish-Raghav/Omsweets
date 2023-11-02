@@ -17,8 +17,8 @@ const Bakerie = () => {
   },[swet])
   // console.log(ast);
   return (
-    <div className='flex flex-col  '> 
-    <div className='flex justify-center mt-16 mx-8   gap-2 flex-wrap '>
+    <div className='flex flex-col max-w items-center    '> 
+    <div className='flex md:justify-center mt-20  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto sm:border-4 sm:border-y-emerald-500'>
        {
       ast.map((el, index) => {
                 return (

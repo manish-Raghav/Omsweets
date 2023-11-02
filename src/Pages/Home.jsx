@@ -41,9 +41,9 @@ const Home = () => {
          
     const setm = useSelector((stm) =>stm.productcart.productList);
 
-    useEffect(() =>{
-      setsw( setm.filter((item) => item.product_name ==="sweet" ))
-    },[])
+    // useEffect(() =>{
+    //   setsw( setm.filter((item) => item.product_name ==="sweet" ))
+    // },[])
    
      //console.log(setm , "hey i am here look my side ---->");  
       
@@ -121,6 +121,8 @@ const Home = () => {
                     price={el.prise}
                     image={el.img1}
                     quant ={el.quantity}
+                    discount = {el.discount}
+                    desc ={el.description}
                   />
                 );
               })
@@ -165,13 +167,13 @@ const Home = () => {
      sw.map((el, index) => {
                 return (
                   <Mycard
-                 
                     id={el._id}
                     name={el.Name}
                     catego={el.product_name}
                     price={el.prise}
                     image={el.img1}
                     quant ={el.quantity}
+                    discount = {el.discount}
                   />
                 );
               })
@@ -212,7 +214,9 @@ const Home = () => {
      </div>
      {
      sw.map((el, index) => {
+     
                 return (
+                 
                   <Mycard
                  
                     id={el._id}
@@ -221,6 +225,7 @@ const Home = () => {
                     price={el.prise}
                     image={el.img1}
                     quant ={el.quantity}
+                    discount = {el.discount}
                   />
                 );
               })

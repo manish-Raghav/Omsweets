@@ -3,11 +3,13 @@ import React, { useState } from 'react'
 
 const Upload = () => {
 
-      const[pro,setpro] = new useState("");
-      const[nm,setnm] =  new useState('');
-      const[img,setimg] = new useState("");
-      const[qnt ,setqnt] = new useState(0);
-      const[ps,setps] = new useState(0);
+      const[pro,setpro] =  useState("");
+      const[nm,setnm] =   useState('');
+      const[img,setimg] =  useState("");
+      const[qnt ,setqnt] =  useState(0);
+      const[ps,setps] = useState(0);
+      const[dscount,setsv] = useState("")
+      const[dsc ,setdsc] = useState("");
     
   const formdata= new FormData();
     formdata.append('pro',pro);
@@ -15,6 +17,8 @@ const Upload = () => {
     formdata.append('img',img);
     formdata.append('qnt',qnt);
     formdata.append('ps',ps);
+    formdata.append('ds',dscount);
+    formdata.append('dscr',dsc);
  
 
     const myfun =()=>{
@@ -35,32 +39,54 @@ const Upload = () => {
     
 
   return (
-    <div className=' flex flex-col w-full h-full'>
-    <div className='mt-28'>
-    <label >Product_nmae</label>
-      <input type='text' onChange={e=>setpro(e.target.value.toLowerCase)} />
+    <div className=' flex  justify-center w-full h-full'>
+      <div className='mt-28 flex  flex-col items-start  '>
+
+     
+    <div >
+   
+      <input type='text' className='border-2 border-black' placeholder='Product_name' onChange={e=>setpro(e.target.value)} />
       </div>
-      <div>
+
+
+      <div className='flex flex-col'>
       <label >Name</label>
-      <input type='text' onChange={e=>setnm(e.target.value.toLowerCase)} />
+      <input type='text'  className='border-2 border-black' onChange={e=>setnm(e.target.value)} />
       </div>
-      <div>
+      <div className='flex flex-col'>
       <label >Quantity</label>
-      <input type='number'  onChange={e=>setqnt(e.target.value)} />
+      <input type='text'  className='border-2 border-black'  placeholder='gm,kg,pack' onChange={e=>setqnt(e.target.value)} />
       </div>
-      <div>
+      <div className='flex flex-col'>
       <label >prise</label>
-      <input type='number'  onChange={e=>setps(e.target.value)} />
+      <input type='number' className='border-2 border-black'  onChange={e=>setps(e.target.value)} />
       </div>
-      <div>
+
+      <div className='flex flex-col'>
+      
+      <label >Discount</label>
+      <input type='text' className='border-2 border-black' onChange={e=>setsv(e.target.value)} />
+      </div>
+      
+      <div className='flex flex-col'>
       <label >images</label>
       <input type='file' name='img' onChange={e=>setimg(e.target.files[0])} />
       </div>
-      <div>
-     
-      <button className='bg-lime-500' onClick={myfun}> Submit</button>
+
+        
+      <div className='flex flex-col'>
+      
+      <label >Description</label>
+      <input type='text' className='border-2 border-black' onChange={e=>setdsc(e.target.value)} />
       </div>
 
+
+
+      <div className=' relative left-10 top-6'>
+     
+      <button className=' w-[4rem] h-[2.5rem] bg-yellow-600  rounded-md hover:text-gray-100' onClick={myfun}> Submit</button>
+      </div>
+      </div>
     </div>
   )
 }

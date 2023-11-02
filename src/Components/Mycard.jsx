@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Card from 'react-bootstrap/Card';
 import { useDispatch } from 'react-redux';
 import { addCartItem } from '../reduxstore/productslice';
+import { useNavigate } from 'react-router-dom';
+import Cardinfo from './Cardinfo';
 
-const Mycard = ({ id, name, image,catego, price , quant}) => {
+const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
 //{ id, name, image,catego, price , quant}
 
   console.log("my name is  ->>",name);
   console.log("my name is  ->>",image);
   console.log("my name is  ->>",catego);
+  console.log("my name is  ->>",discount);
+  const [open, setopen]= useState(false);
   // const setm = useSelector((stm) =>stm.productcart.productList);
+
+   const navi = useNavigate();
+
+  const usena = ()=>{
+   setopen(true);
+  }
+
   const usedisp = useDispatch()
     
     const handlecart = () =>{
@@ -20,7 +31,7 @@ const Mycard = ({ id, name, image,catego, price , quant}) => {
           quant:quant,
           price:price,
           catego:catego,
-          img:image
+          img:image 
       }));
 
        
@@ -67,10 +78,10 @@ const Mycard = ({ id, name, image,catego, price , quant}) => {
      <div className=' '> 
        <Card className=' sm:w-20 md:w-56  hover:border-1  hover:border-solid  hover:border-black hover: cursor-pointer'  >
        <div className='flex justify-center py-1'>
-      <Card.Img className=' md:w-52 h-28 sm:w-3' src={`http://localhost:4000/${image}`} />
+      <Card.Img className=' md:w-52 h-28 sm:w-3' src={`http://localhost:4000/${image}`} onClick={usena} />
       </div>
       <div className='absolute top-2 left-3 bg-red-600 rounded-sm'>
-        <h5 className='text-slate-200 text-base'>-₹20%</h5>
+        <h5 className='text-slate-200 text-base'>-₹{discount}</h5>
       </div>
       <Card.Body>
 
@@ -94,6 +105,14 @@ const Mycard = ({ id, name, image,catego, price , quant}) => {
       </Card.Body>
     </Card>
       </div> 
+
+      {/* seopen={setopen} ope={open} */}
+      {
+        open ? (
+          <Cardinfo  data={setopen} id={id} name={name} img ={image} cat={catego} ps ={price}  quant= {quant} dis={discount} desc={desc} />
+
+         ) : null
+      }
     </div>
   )
 }

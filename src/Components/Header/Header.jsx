@@ -1,4 +1,4 @@
- import React from 'react'
+ import React, { useState } from 'react'
   import img from '../../assets/oms.png'
    
   import img2 from '../../assets/om.png'
@@ -9,29 +9,43 @@ import {FaBars} from 'react-icons/fa'
 import {FaUser} from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import Nav from './Nav';
+import Icon from './Icon';
 //import { Mydt } from '../../Carousel/Mydt';
 
 
 
  
  const Header = () => {
+  const [isset ,setisset] = useState(false);
 
-   const data= useSelector((stat) => stat.productcart.cartItem);
+  //  const data= useSelector((stat) => stat.productcart.cartItem);
    return (
-     <header className='fixed shadow-md md:w-full h-16 md:px-4 z-50 bg-white'>
+     <header className='fixed shadow-md w-screen h-16 md:px-4 z-50 bg-white'>
         
-            <div className=' flex items-center h-full justify-between'>
+            <div className=' flex items-center   '>
              <Link to="/" >
-                <div className='mx-6 '>
-                     <img src={img} alt='img' className='md:h-14 sm:h-9 ' />
-                </div>
+                <div className='mx-6 md:p-2'>
+                     <img src={img} alt='img' className=' h-14  ' />
+                </div>      
                 </Link>
-               
+                
+                  <nav className=' md:flex  hidden gap-4 uppercase relative left-72 '>
+                    
+                     <div>
+                     <Nav />
+                     </div>
+                     
+                     <div className='relative left-32'>
+                      <Icon />
+                      </div> 
+
+                      
+
+                  </nav>
                   
-                  
-             <div className=' mt-2 mr-6 flex items-center gap-4 md:gap-7'>
+             {/* <div className=' mt-2 mr-6 flex items-center gap-4 md:gap-7'>
              
-                   <nav className=' flex gap-4  text-base md:text-lg '>
+                   <nav className=' flex  gap-4  text-base md:text-lg '>
 
                   
                 <Link to='/' className='font-serif text-xl hover:text-red-700 focus:text-red-700'>HOME</Link>
@@ -64,18 +78,19 @@ import Nav from './Nav';
 
 
 
-               <div className='cursor-pointer md:hidden'>
-               <FaBars />
-               </div>
+               
                
          
 
               </nav>
+              </div> */}
 
-     
 
-            
-           </div>  
+
+
+              <div className='cursor-pointer  relative left-40 py-3 w-44 md:hidden'>
+               <FaBars />
+               </div>
                    
                 
                             
