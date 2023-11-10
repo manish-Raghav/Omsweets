@@ -13,20 +13,20 @@ import { decreaseQty, deleteCartItem, increaseQty } from '../reduxstore/products
 const Cartproduct = ({ id, name, image, catego, qty, total, price,quant }) => {
   const dispatch = useDispatch()
   
-  console.log("dtin cartproduct -->", id)
-  console.log("dtin cartproduct -->", name)
-  console.log("dtin cartproduct -->", image)
-  console.log("dtin cartproduct -->", catego)
-  console.log("dtin cartproduct -->", qty)
-  console.log("dtin cartproduct -->",  total)
-  console.log("dtin cartproduct -->", price)
-  console.log("dtin cartproduct -->", quant)
+  // console.log("dtin cartproduct -->", id)
+  // console.log("dtin cartproduct -->", name)
+  // console.log("dtin cartproduct -->", image)
+  // console.log("dtin cartproduct -->", catego)
+  // console.log("dtin cartproduct -->", qty)
+  // console.log("dtin cartproduct -->",  total)
+  // console.log("dtin cartproduct -->", price)
+  // console.log("dtin cartproduct -->", quant)
 
 
 return (
   <div className=" bg-slate-200 p-2 flex gap-4  rounded border border-slate-300">
     <div className="p-3 bg-white rounded overflow-hidden">
-      <img src={`http://localhost:4000/${image}`} className="h-28 w-40 object-cover " />
+      <img src={`process.env.REACT_APP_URL/${image}`} className="h-28 w-40 object-cover " />
     </div>
     <div className="flex flex-col gap-1 w-full">
       <div className="flex justify-between">

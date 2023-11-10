@@ -50,7 +50,7 @@ const Home = () => {
      
     
     useEffect(()=>{
-      axios.get('http://localhost:4000/Sweet')
+      axios.get(' https://nice-pink-llama-cape.cyclic.app/Sweet')
       .then(res =>{
         setsw(res.data);
       })
@@ -100,12 +100,12 @@ const Home = () => {
 
 
 
-    <div className='  w-full  mt-28 absolute z-20 flex justify-between'>
+    <div className='  w-full  mt-28 sm:invisible md:visible absolute z-20 flex justify-between'>
      <div className='absolute  z-40 top-[1.2rem]  '>
      <button className='text-3xl font-bold bg-red-600 hover:bg-amber-400 rounded-md' onClick={privious} ><GrPrevious/></button>
      </div>
 
-     <div className= 'sm:invisible md:visible absolute right-[0rem] top-[1.2rem] z-30'>
+     <div className= ' absolute right-[0rem] top-[1.2rem] z-30'>
      <button className='text-3xl font-bold  bg-red-600 hover:bg-amber-400 rounded-md ' onClick={nextd}  ><GrNext /></button>
      </div>
      </div>
@@ -154,12 +154,12 @@ const Home = () => {
 
 
 
-     <div className='  w-full  mt-28 absolute z-20 flex justify-between'>
+     <div className='  w-full sm:invisible md:visible mt-28 absolute  z-20 flex justify-between'>
      <div className='absolute  z-40 top-[1.2rem]  '>
      <button className='text-3xl font-bold bg-red-600 hover:bg-amber-400 rounded-md' onClick={privious} ><GrPrevious/></button>
      </div>
 
-     <div className= 'sm:invisible md:visible absolute right-[0rem] top-[1.2rem] z-30'>
+     <div className= ' absolute right-[0rem] top-[1.2rem] z-30'>
      <button className='text-3xl font-bold  bg-red-600 hover:bg-amber-400 rounded-md ' onClick={nextd}  ><GrNext /></button>
      </div>
      </div>
@@ -174,6 +174,7 @@ const Home = () => {
                     image={el.img1}
                     quant ={el.quantity}
                     discount = {el.discount}
+                    desc ={el.description}
                   />
                 );
               })
@@ -203,12 +204,12 @@ const Home = () => {
 
 
 
-     <div className='  w-full  mt-28 absolute z-20 flex justify-between'>
-     <div className='absolute  z-40 top-[1.2rem]  '>
+     <div className='  w-full sm:invisible md:visible  mt-28 absolute z-20 flex justify-between'>
+     <div className='absolute   z-40 top-[1.2rem]  '>
      <button className='text-3xl font-bold bg-red-600 hover:bg-amber-400 rounded-md' onClick={privious} ><GrPrevious/></button>
      </div>
 
-     <div className= 'sm:invisible md:visible absolute right-[0rem] top-[1.2rem] z-30'>
+     <div className= ' absolute right-[0rem] top-[1.2rem] z-30'>
      <button className='text-3xl font-bold  bg-red-600 hover:bg-amber-400 rounded-md ' onClick={nextd}  ><GrNext /></button>
      </div>
      </div>
@@ -226,6 +227,7 @@ const Home = () => {
                     image={el.img1}
                     quant ={el.quantity}
                     discount = {el.discount}
+                    desc ={el.description}
                   />
                 );
               })

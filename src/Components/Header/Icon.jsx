@@ -12,11 +12,11 @@ const Icon = () => {
 
     const data= useSelector((stat) => stat.productcart.cartItem);
   return (
-    <div className='flex  gap-12 '>
+    <div className='flex gap-4  md:gap-12 '>
            <Link to="/Cart">
                  <div className='relative cursor-pointer hover:text-red-700 focus:text-red-700 '>
-                 <Badge badgeContent={data.length} color="success">
-                 <img  src={img2} alt='img2' className='h-10'  />
+                 <Badge  badgeContent={data.length} color="success">
+                 <img  src={img2}  alt='img2' className=' sm:h-7 md:h-8'  />
                   </Badge>   
               
                  
@@ -24,8 +24,8 @@ const Icon = () => {
                  </Link>
 
                  <Link to='/upload'>
-                 <div className='relative cursor-pointer p-2 hover:text-red-700 focus:text-red-700'>
-                 <FaUser />   
+                 <div className='   cursor-pointer p-2 hover:text-red-700 focus:text-red-700'>
+                 <FaUser className='text-xl'  />   
                    </div>
                  </Link>
     </div>

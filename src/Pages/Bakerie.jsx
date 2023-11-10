@@ -18,25 +18,27 @@ const Bakerie = () => {
   // console.log(ast);
   return (
     <div className='flex flex-col max-w items-center    '> 
-    <div className='flex md:justify-center mt-20  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto sm:border-4 sm:border-y-emerald-500'>
+    <div className='flex justify-center mt-20 sm:  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
        {
       ast.map((el, index) => {
                 return (
                   <Mycard
                  
-                    id={el._id}
-                    name={el.Name}
-                    catego={el.product_name}
-                    price={el.prise}
-                    image={el.img1}
-                    quant ={el.quantity}
-                  />
+                 id={el._id}
+                 name={el.Name}
+                 catego={el.product_name}
+                 price={el.prise}
+                 image={el.img1}
+                 quant ={el.quantity}
+                 discount = {el.discount}
+                 desc ={el.description}
+               />
                 );
               })
      }
        </div>
 
-       <div className='mt-20 w-full'>
+       <div className='  mt-16  w-full  '>
     <Footer/>
     </div>
     </div>

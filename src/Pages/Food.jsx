@@ -24,18 +24,20 @@ const Food = () => {
                 return (
                   <Mycard
                  
-                    id={el._id}
-                    name={el.Name}
-                    catego={el.product_name}
-                    price={el.prise}
-                    image={el.img1}
-                    quant ={el.quantity}
-                  />
+                 id={el._id}
+                 name={el.Name}
+                 catego={el.product_name}
+                 price={el.prise}
+                 image={el.img1}
+                 quant ={el.quantity}
+                 discount = {el.discount}
+                 desc ={el.description}
+               />
                 );
               })
      }
        </div>
-       <div className='mt-20 w-screen'>
+       <div className=' mt-16   w-full '>
     <Footer/>
     </div>
     </div>

@@ -11,14 +11,14 @@ const Nav = () => {
         
           
               
-                 <div className="flex gap-4">
-                 <Link to='/' className='font-serif text-xl hover:text-red-700 focus:text-red-700'>HOME</Link>
+                 <div className=" flex sm:flex-col  md:flex-row sm: gap-3 md:gap-4">
+                 <Link to='/' className=' sm:text-white md:text-black font-serif text-xl hover:text-red-700 focus:text-red-700'>HOME</Link>
                
-               <Link to='/Sweet ' className='font-serif text-xl  hover:text-red-700 focus:text-red-700'>SWEET</Link>
+               <Link to='/Sweet ' className='sm:text-white md:text-black font-serif text-xl  hover:text-red-700 focus:text-red-700'>SWEET</Link>
               
-               <Link to='/Bakerie' className='font-serif text-xl hover:text-red-700 focus:text-red-700'>BAKERIES</Link>
-               <Link to='/Chocolate' className='font-serif text-xl  hover:text-red-700 focus:text-red-700'>CHOCOLATES</Link>
-               <Link to='/Food' className='font-serif text-xl hover:text-red-700 focus:text-red-700'>FOODS</Link>
+               <Link to='/Bakerie' className='sm:text-white md:text-black font-serif text-xl hover:text-red-700 focus:text-red-700'>BAKERIES</Link>
+               <Link to='/Chocolate' className='sm:text-white md:text-black font-serif text-xl  hover:text-red-700 focus:text-red-700'>CHOCOLATES</Link>
+               <Link to='/Food' className='sm:text-white md:text-black font-serif text-xl hover:text-red-700 focus:text-red-700'>FOODS</Link>
                 </div>
          
 

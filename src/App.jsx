@@ -26,10 +26,10 @@ function App() {
 
 
   const usedisp = useDispatch()
-
-    
+  // http://localhost:4000/all
+  
   useEffect(()=>{
-    axios.get('http://localhost:4000/all')
+    axios.get('https://nice-pink-llama-cape.cyclic.app/all')
     .then(res =>{
        usedisp(setDataProduct(res.data));
        

@@ -13,7 +13,7 @@ const Chocolate = () => {
     // axios.get('http://localhost:4000/all')
     // .then(res =>{
     //   setast(res.data);
-  setast( swet.filter((item) => item.product_name ==="chocolates" ))
+  setast( swet.filter((item) => item.Name ==="chocolates" ))
 
   
   },[swet])
@@ -33,13 +33,15 @@ const Chocolate = () => {
                     price={el.prise}
                     image={el.img1}
                     quant ={el.quantity}
+                    discount = {el.discount}
+                    desc ={el.description}
                   />
                 );
               })
      }
        </div>
 
-       <div className='mt-20 w-screen'>
+       <div className='  mt-16   w-full  '>
     <Footer/>
     </div>
     </div>
