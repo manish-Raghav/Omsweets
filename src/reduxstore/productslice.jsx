@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { TbTextColor } from "react-icons/tb";
 // import { toast } from "react-hot-toast";
 
 const initialState = {
@@ -9,21 +10,26 @@ const initialState = {
  const productSlice = createSlice({
   name: "product",
   initialState,
+
   reducers: {
     setDataProduct: (state, action) => {
       state.productList = [...action.payload];
     },
     addCartItem: (state, action) => {
-      console.log(action)
+      console.log( " here is action data ",action)
+      
       const check = state.cartItem.some((el) => el._id === action.payload._id);
+     
+       var total =0;
       if (check) {
-        // toast("Already Item in Cart");
+        alert("Already Item in Cart" );
       } else {
         // toast("Item Add successfully");
-        const total = action.payload.prise;
+         total = action.payload.price;
+        console.log("total is here ----> " , total)
         state.cartItem = [
           ...state.cartItem,
-          { ...action.payload, qty: 1, total: total },
+          { ...action.payload, qty: 1, total: total  },
         ];
       }
     },

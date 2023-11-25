@@ -23,7 +23,7 @@ const Icon = () => {
                  </div>
                  </Link>
 
-                 <Link to='/upload'>
+                 <Link to='/login'>
                  <div className='   cursor-pointer p-2 hover:text-red-700 focus:text-red-700'>
                  <FaUser className='text-xl'  />   
                    </div>

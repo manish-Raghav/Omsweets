@@ -1,12 +1,24 @@
 import React from 'react'
 import {RxCross1} from 'react-icons/rx'
 import { useDispatch } from 'react-redux';
+
+import { addCartItem } from '../reduxstore/productslice';
 //{seopen,ope}
 //seopen(false)
 const Cardinfo = ({data, id, name, img  ,cat, ps ,  quant, dis, desc}) => {
 
-  const myfun =() =>{
 
+  const mydisp = useDispatch();
+
+  const myfun =() =>{
+    mydisp(addCartItem({
+      _id:id,
+      name:name,
+      quant:quant,
+      price:ps,
+      catego:cat,
+      img:img
+  }));
   } 
 
   return (
@@ -19,8 +31,8 @@ const Cardinfo = ({data, id, name, img  ,cat, ps ,  quant, dis, desc}) => {
 
 
          <div className='flex flex-col md:flex-row'>
-            <div className=' p md:ml-1  '>
-                <img src={` https://nice-pink-llama-cape.cyclic.app/${img}`} alt='img' className='bg-cover mt-4 sm:w-[60rem] sm:h-[20vh] md:w-[18vw] md:h-[40vh]   rounded-md' />
+            <div className=' p md:ml-1  relative bottom-4  '>
+                <img src={` http://localhost:4000/${img}`} alt='img' className='bg-cover mt-4 sm:w-[60wh] sm:h-[20vh] md:w-[18vw] md:h-[40vh]   rounded-md' />
             </div>
 
             <div className='flex flex-col ml-4 '> 
@@ -29,8 +41,8 @@ const Cardinfo = ({data, id, name, img  ,cat, ps ,  quant, dis, desc}) => {
             </div>
 
 
-            <div className='pt-3 relative left-5 top-2 pr-4 md:w-[45rem] '>
-             <p className='font-sans'>
+            <div className='pt-3 relative left-5 top-2 pr-4 max-w-screen-sm max-h-[5vh] md:w-[50rem] '>
+             <p className='font-sans text-[1rem]'>
                {desc}
              </p>
             </div>

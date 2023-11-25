@@ -20,8 +20,8 @@ const Chocolate = () => {
  // console.log("tht htha tha tha dunimyaa ki tha tha --->", swet)
    
   return (
-    <div className='flex flex-col w-screen items-center '> 
-       <div className='flex justify-center mt-16 mx-8   gap-2 flex-wrap  max-w-full '>
+    <div className='flex flex-col max-w items-center    '> 
+    <div className='flex justify-center mt-20  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
        {
       ast.map((el, index) => {
                 return (

@@ -26,7 +26,7 @@ const Cartproduct = ({ id, name, image, catego, qty, total, price,quant }) => {
 return (
   <div className=" bg-slate-200 p-2 flex gap-4  rounded border border-slate-300">
     <div className="p-3 bg-white rounded overflow-hidden">
-      <img src={`process.env.REACT_APP_URL/${image}`} className="h-28 w-40 object-cover " />
+      <img src={`http://localhost:4000/${image}`} className="h-28 w-40 object-cover " />
     </div>
     <div className="flex flex-col gap-1 w-full">
       <div className="flex justify-between">

@@ -8,7 +8,7 @@ const Cart = () => {
     console.log('we are hre in cart')
      
      const data= useSelector((stat) => stat.productcart.cartItem);
-   //  console.log("ha ha ha ha ha  ==>" ,data);
+    console.log("ha ha ha ha ha  ==>" ,data);
 
      const totalPrice = data.reduce(
       (acc, curr) => acc + parseInt(curr.total),
@@ -23,8 +23,8 @@ const Cart = () => {
 
     }
   return (
-    <div className=' flex justify-center flex-row w-full h-full '>
-        <div  className=' mt-20 mx-6  border-2 border-teal-400 border-solid'>
+    <div className=' flex justify-center flex-row   '>
+        <div  className=' mt-20 mx-6  '>
        <div className="  flex justify-center p-2 md:p-4">
         <h2 className="text-lg md:text-2xl font-bold text-slate-600">
           Your Cart Items
@@ -32,10 +32,10 @@ const Cart = () => {
         </div>
 
         {data[0] ?
-        <div className=" flex  gap-4 ">
+        <div className="  md:flex  md:gap-4 ">
            
         
-          <div className="  w-full max-w-3xl border-2 border-solid border-orange-400 ">
+          <div className="  w-full max-w-3xl  ">
              {data.map((el) => {
               return (
                 <Cartproduct
@@ -56,7 +56,7 @@ const Cart = () => {
           {/* total cart item  */}
 
           
-          <div className="w-full max-w-md ml-14 border-2 border-solid border-fuchsia-700">
+          <div className="w-full my-20 md:my-0  md:ml-14 ">
             <h2 className="bg-blue-500 text-white p-2 text-lg">Summary</h2>
             <div className="flex w-full py-2 text-lg border-b">
               <p>Total Qty :</p>

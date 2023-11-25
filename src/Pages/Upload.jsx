@@ -22,8 +22,8 @@ const Upload = () => {
  
 
     const myfun =()=>{
-
-       axios.post(' https://nice-pink-llama-cape.cyclic.app/give',formdata)
+       
+       axios.post('http://localhost:4000/give',formdata)
        .then((rs) =>{
         console.log('result is succsess',rs)
        })
@@ -65,7 +65,7 @@ const Upload = () => {
       <div className='flex flex-col'>
       
       <label >Discount</label>
-      <input type='text' className='border-2 border-black pl-1' onChange={e=>setsv(e.target.value)} />
+      <input type='text'  className='border-2 border-black pl-1' onChange={e=>setsv(e.target.value)} />
       </div>
       
       <div className='flex flex-col ml-28'>
@@ -77,7 +77,7 @@ const Upload = () => {
       <div className='flex flex-col'>
       
       <label >Description</label>
-      <input type='text' className='border-2 border-black pl-1 h-16' onChange={e=>setdsc(e.target.value)} />
+      <input type='text' placeholder='write in 50 words' className='border-2 border-black pl-1 h-16' onChange={e=>setdsc(e.target.value)} />
       </div>
 
 

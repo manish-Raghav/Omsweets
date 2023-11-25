@@ -78,7 +78,7 @@ const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
      <div className=' '> 
        <Card className=' md:w-56  hover:border-1  hover:border-solid  hover:border-black hover: cursor-pointer'  >
        <div className='flex justify-center py-1'>
-      <Card.Img className='sm:w-[10rem] md:w-52 h-28 ' src={` https://nice-pink-llama-cape.cyclic.app/${image}`} onClick={usena} />
+      <Card.Img className='sm:w-[10rem] md:w-52 h-28 ' src={` http://localhost:4000/${image}`} onClick={usena} />
       </div>
       <div className='absolute top-2 left-3 bg-red-600 rounded-sm'>
         <h5 className='text-slate-200 text-base'>-₹{discount}</h5>

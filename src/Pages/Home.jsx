@@ -50,7 +50,7 @@ const Home = () => {
      
     
     useEffect(()=>{
-      axios.get(' https://nice-pink-llama-cape.cyclic.app/Sweet')
+      axios.get(' http://localhost:4000/Sweet')
       .then(res =>{
         setsw(res.data);
       })
@@ -183,10 +183,11 @@ const Home = () => {
 
 
 
-     <div className=' pt-5 flex flex-row justify-center' >
-    <hr className='mt-4 md:w-96 h-1  bg-red-900' />
+     <div className='pt-5 flex flex-row justify-center' >
+    <hr className='mt-4 md:w-96 h-1 bg-red-900' />
        <div className=' flex  '> 
-       <h1 className='ml-3 mr-3 text-3xl font-normal text-red-900 '>SWEET'S</h1>
+       <h1 className='text-3xl  font-bold text-red-900 pr-2 ' >Bestseller </h1>
+       <h1 className='text-3xl font-thin text-red-900 ' > Products </h1>
      </div>
      <hr className='mt-4 md:w-96 h-1 bg-red-900' />
      </div>

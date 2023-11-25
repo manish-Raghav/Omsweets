@@ -102,7 +102,7 @@
                   <div className=''>
                   <Icon />
                   </div>
-                  <div>
+                  <div className='relative right-2'>
                   <FaBars size={30} onClick={setclick}/>
                   </div>
                
@@ -112,7 +112,7 @@
                      isset ? (<div className=' w-screen h-screen z-50 absolute  top-0 md:hidden'> 
                            <div className='w-screen  bg-[#00000090]  h-screen z-50   ' onClick={stopdt}> 
 
-                           <div className='flex z-50  absolute right-5   top-3 '> 
+                           <div className='flex z-50  absolute right-10   top-5 '> 
                               <RxCross2 size={50} className='text-slate-100 font-extrabold' onClick={stopdt}/>
                               </div>
                               
