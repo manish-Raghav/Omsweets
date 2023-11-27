@@ -9,10 +9,10 @@ import Cardinfo from './Cardinfo';
 const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
 //{ id, name, image,catego, price , quant}
 
-  console.log("my name is  ->>",name);
-  console.log("my name is  ->>",image);
-  console.log("my name is  ->>",catego);
-  console.log("my name is  ->>",discount);
+  // console.log("my name is  ->>",name);
+  // console.log("my name is  ->>",image);
+  // console.log("my name is  ->>",catego);
+  // console.log("my name is  ->>",discount);
   const [open, setopen]= useState(false);
   // const setm = useSelector((stm) =>stm.productcart.productList);
 
@@ -78,7 +78,7 @@ const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
      <div className=' '> 
        <Card className=' md:w-56  hover:border-1  hover:border-solid  hover:border-black hover: cursor-pointer'  >
        <div className='flex justify-center py-1'>
-      <Card.Img className='sm:w-[10rem] md:w-52 h-28 ' src={` http://localhost:4000/${image}`} onClick={usena} />
+      <Card.Img className='sm:w-[10rem] md:w-52 h-28 ' src={`https://nice-pink-llama-cape.cyclic.app/${image}`} onClick={usena} />
       </div>
       <div className='absolute top-2 left-3 bg-red-600 rounded-sm'>
         <h5 className='text-slate-200 text-base'>-₹{discount}</h5>
@@ -93,7 +93,7 @@ const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
         
         <div  className='flex space-x-1 relative bottom-1'>
          <h3 className='text-orange-900 font-medium'>Weight :</h3>
-        <h3 className='text-orange-900'>{quant}kg</h3>
+        <h3 className='text-orange-900'>{quant}</h3>
        </div>
        <div>
        

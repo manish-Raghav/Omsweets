@@ -50,7 +50,7 @@ const Home = () => {
      
     
     useEffect(()=>{
-      axios.get(' http://localhost:4000/Sweet')
+      axios.get('https://nice-pink-llama-cape.cyclic.app/Sweet')
       .then(res =>{
         setsw(res.data);
       })

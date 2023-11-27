@@ -23,8 +23,8 @@ const Icon = () => {
                  </div>
                  </Link>
 
-                 <Link to='/login'>
-                 <div className='   cursor-pointer p-2 hover:text-red-700 focus:text-red-700'>
+                 <Link to='/Upload'>
+                 <div className='cursor-pointer p-2 hover:text-red-700 focus:text-red-700'>
                  <FaUser className='text-xl'  />   
                    </div>
                  </Link>

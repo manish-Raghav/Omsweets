@@ -5,10 +5,10 @@ import Cartproduct from '../Components/Cartproduct'
 
 
 const Cart = () => {
-    console.log('we are hre in cart')
+    // console.log('we are hre in cart')
      
      const data= useSelector((stat) => stat.productcart.cartItem);
-    console.log("ha ha ha ha ha  ==>" ,data);
+    // console.log("ha ha ha ha ha  ==>" ,data);
 
      const totalPrice = data.reduce(
       (acc, curr) => acc + parseInt(curr.total),
@@ -35,7 +35,7 @@ const Cart = () => {
         <div className="  md:flex  md:gap-4 ">
            
         
-          <div className="  w-full max-w-3xl  ">
+          <div className="  w-full max-w-3xl">
              {data.map((el) => {
               return (
                 <Cartproduct

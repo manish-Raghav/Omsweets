@@ -14,20 +14,21 @@ const Sweet = () => {
   const [ast ,setast] = useState([]);
 
   const swet = useSelector((stat) => stat.productcart.productList);
-  // useEffect(()=>{
-  //   // axios.get('http://localhost:4000/all')
-  //   // .then(res =>{
-  //   //   setast(res.data);
-  // setast( swet.filter((item) => item.product_name ==="sweet" ))
+  useEffect(()=>{
+    // axios.get('http://localhost:4000/all')
+    // .then(res =>{
+    //   setast(res.data);
+   setast( swet.filter((item) => item.product_name ==="sweet" ))
 
   
-  // },[swet])
+  },[])
    
   return (
     <div className='flex flex-col max-w items-center    '> 
+      
        <div className='flex justify-center mt-20  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
        {
-      swet.map((el, index) => {
+      ast.map((el, index) => {
         
                 return (
                   <Mycard
