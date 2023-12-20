@@ -69,7 +69,7 @@ const Home = () => {
     
 
   return (
-    <div className='flex flex-col  '> 
+    <div className='flex flex-col relative  h-screen '> 
      
      <div className='mt-[4.1rem] w-full'>
       <MainCarousel />
@@ -237,9 +237,9 @@ const Home = () => {
 
     </div>
 
-    <div className='mt-20'>
+    {/* <div className='absolute bottom-0 w-full  '>
     <Footer />
-    </div>
+    </div> */}
       
     </div>
     

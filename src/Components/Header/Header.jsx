@@ -10,7 +10,14 @@
    import {FaUser} from 'react-icons/fa';
    import { useSelector } from 'react-redux'
    import Nav from './Nav';
-   import Icon from './Icon';
+    import Icon from './Icon'
+    import { CiSearch } from "react-icons/ci";
+    import Search from '../../Pages/Search';
+import { data } from 'autoprefixer';
+   // import IconButton from "@mui/material/IconButton";
+   // import SearchIcon from "@mui/icons-material/Search";
+   // import TextField from "@mui/material/TextField";
+
    //import { Mydt } from '../../Carousel/Mydt';
 
 
@@ -18,6 +25,14 @@
    
    const Header = () => {
    const [isset ,setisset] = useState(false);
+   const [dt ,setdt] = useState("")
+
+
+   const mn =  useSelector((stat) => stat.productcart.productList)
+    
+   const [dta ,setdta] = useState(mn)
+   // console.log(dt);
+
    const setclick = ()=>{
       setisset(true)
    }
@@ -25,30 +40,52 @@
    const stopdt = ()=>{
       setisset(false)
    }
+  
+
+    const fn =(e) =>{
+
+      setdt(e);
+      setdta(mn.filter((itm) => itm.Name.toLowerCase().includes(e)) );  
+     // console.log( "hry there  ==>" ,dta);
+
+    }
    //  const data= useSelector((stat) => stat.productcart.cartItem);
       return (
-      <header className='fixed shadow-md w-screen h-16 md:px-4 z-50 bg-white'>
+      <header className='fixed shadow-md w-screen h-16 md:px-4 z-50 bg-white border-2 border-green-800'>
          
-               <div className=' flex items-center   '>
+               <div className=' flex  md:items-center  relative top-1   '>
                <Link to="/" >
-                  <div className='mx-6 md:p-2'>
-                        <img src={img} alt='img' className=' sm:w-[5rem] sm:h-[3rem] md:[3rem] md:w-[5rem] h-14  ' />
+                  <div className='sm:mx-2 md:mx-6 sm:mt-2 md:mt-0   md:p-2'>
+                        <img src={img} alt='img' className=' z-20 sm:w-[4rem] sm:h-[2rem] md:[3rem] md:w-[5rem] h-14  ' />
                   </div>      
                   </Link>
+
+
+
+                  <div className='flex absolute left-20 md:left-32 sm:top-2 md:w-56 sm:w-36  sm:z-0 md:z-20 w-auto rounded-2xl  shadow-xl'>
+                     <input    type='text' placeholder='Search here.. '   onChange={(e) =>{fn(e.target.value)}} className='md:w-56 sm:w-40  h-9 border-[1px] focus:border-none
+                      border-red-600 rounded-xl px-2 box-border-none   text-black' />
+                     <div className='absolute md:left-48  sm:left-32 justify-center  '>
+                     <CiSearch  size={30}  className=' cursor-pointer text-red-700   ' /> 
+                     </div>
+                    
+                      
+                  </div>
+
                   
-                     <nav className=' md:flex  hidden gap-4 uppercase relative left-72 '>
+                  <nav className=' md:flex  sm:hidden gap-4 uppercase relative left-64 '>
                      
-                        <div>
-                        <Nav />
-                        </div>
-                        
-                        <div className='relative left-32'>
-                        <Icon />
-                        </div> 
+                     <div>
+                     <Nav />
+                     </div>
+                     
+                     <div className='relative left-32'>
+                     <Icon />
+                     </div> 
 
-                        
+                     
 
-                     </nav>
+                  </nav>
 
 
                      
@@ -95,10 +132,7 @@
                </div> */}
 
 
-
-               
-
-               <div className=' ml-24 gap-4 cursor-pointer  flex py-3   md:hidden'>
+               <div className=' relative md:right-14  left-44 gap-2 cursor-pointer  flex py-3   md:hidden'>
                   <div className=''>
                   <Icon />
                   </div>
@@ -107,9 +141,12 @@
                   </div>
                
                   </div>
+               
 
+               
+                  
                   {
-                     isset ? (<div className=' w-screen h-screen z-50 absolute  top-0 md:hidden'> 
+                     isset ? (<div className=' w-screen h-screen z-50 absolute  top-0 '> 
                            <div className='w-screen  bg-[#00000090]  h-screen z-50   ' onClick={stopdt}> 
 
                            <div className='flex z-50  absolute right-10   top-5 '> 
@@ -118,7 +155,7 @@
                               
                            <div className='flex justify-center relative top-20' > 
                            
-                           <Nav   /></div>
+                           <Nav /></div>
                            {
                         
                         }
@@ -127,7 +164,21 @@
                      </div>
                      
                      ) : null
-                  }  
+                  } 
+
+                 
+
+
+
+
+                  <div className='w-60 absolute top-12  flex justify-center shadow-md sm:left-12 md:left-32 z-60 bg-white   '>
+
+                   {
+                     dt ? <Search dta={dta} /> : null
+                   }
+
+
+                  </div>   
                   
                               
          </div>

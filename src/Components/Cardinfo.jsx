@@ -28,7 +28,7 @@ const Cardinfo = ({data, id, name, img  ,cat, ps ,  quant, dis, desc}) => {
           <RxCross1 size={30} className=' cursor-pointer absolute right-3 top-3 z-50 border-[1px] border-black rounded-2xl'
            onClick={()=>data(false)}
           />
-
+       {/* // https://nice-pink-llama-cape.cyclic.app/uploads\6d6cb44a3dbc2585170b380d1a0913e6 */}
 
          <div className='flex flex-col md:flex-row md:justify-normal   sm:justify-center sm: items-center'>
             <div className='    relative bottom-4  '>

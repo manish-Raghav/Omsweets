@@ -13,15 +13,15 @@ const Chocolate = () => {
     // axios.get('http://localhost:4000/all')
     // .then(res =>{
     //   setast(res.data);
-  setast( swet.filter((item) => item.Name ==="chocolates" ))
+  setast( swet.filter((item) => item.product_name.toLowerCase() ==="chocolates" ))
 
   
   },[swet])
  // console.log("tht htha tha tha dunimyaa ki tha tha --->", swet)
    
   return (
-    <div className='flex flex-col max-w items-center    '> 
-    <div className='flex justify-center mt-20  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
+    <div className='flex flex-col  items-center    '> 
+    <div className='flex justify-center mt-20 sm:  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
        {
       ast.map((el, index) => {
                 return (
@@ -41,9 +41,9 @@ const Chocolate = () => {
      }
        </div>
 
-       <div className='  mt-16   w-full  '>
+       {/* <div className=' absolute w-full bottom-0   '>
     <Footer/>
-    </div>
+    </div> */}
     </div>
   )
 }

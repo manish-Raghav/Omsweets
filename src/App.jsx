@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setDataProduct } from './reduxstore/productslice';
 import Header from './Components/Header/Header';
 import Login from './Pages/Login';
+import Authe from './Pages/Authe';
 
 // import Login from './Pages/Login'
 
@@ -33,7 +34,7 @@ function App() {
     axios.get('https://nice-pink-llama-cape.cyclic.app/all')
     .then(res =>{
        usedisp(setDataProduct(res.data));
-       
+        console.log(res.data);
       // setarr(res.data);
 
     })
@@ -51,7 +52,7 @@ function App() {
     <Routes>
       <Route path="/" element ={ <Home/> } />
       <Route path="/Sweet" element={<Sweet />} />
-      <Route path="/Chocolate" element={<Chocolate/>} />
+      <Route path="/Chocolate" element={<Chocolate />} />
       <Route path="/Bakerie" element={<Bakerie/>} />  
       <Route path="/Food" element={<Food/>} />
       <Route path="/Upload" element={<Upload/>} />
@@ -61,7 +62,7 @@ function App() {
      
     </Routes>
     </div>
-    
+      
     </div>
   )
 }
