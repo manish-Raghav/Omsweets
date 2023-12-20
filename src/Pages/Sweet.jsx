@@ -48,7 +48,7 @@ const Sweet = () => {
               })
      }
        </div>
-       {/* <div  className='absolute w-full bottom-0 '>
+       {/* <div  className='relative w-full bottom-0 top-20 '>
        <Footer/>
        </div> */}
     </div>

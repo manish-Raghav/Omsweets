@@ -237,9 +237,9 @@ const Home = () => {
 
     </div>
 
-    {/* <div className='absolute bottom-0 w-full  '>
-    <Footer />
-    </div> */}
+    {/* <div  className='relative w-full bottom-0 top-20 '>
+       <Footer/>
+       </div> */}
       
     </div>
     

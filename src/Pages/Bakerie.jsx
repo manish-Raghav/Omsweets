@@ -38,9 +38,9 @@ const Bakerie = () => {
      }
        </div>
 
-       {/* <div className=' absolute w-full bottom-0   '>
-    <Footer/>
-    </div> */}
+       <div  className='relative w-full bottom-0 top-20 '>
+       <Footer/>
+       </div>
     </div>
   )
 }

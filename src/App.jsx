@@ -45,10 +45,10 @@ function App() {
   
 
   return (
-    <div>
+    <div >
       
      <Header />
-     <div className=''>
+     <div >
     <Routes>
       <Route path="/" element ={ <Home/> } />
       <Route path="/Sweet" element={<Sweet />} />
@@ -60,9 +60,10 @@ function App() {
       <Route path="/Cart" element={<Cart/>} />
     {/* <Route path="/Login" element={<Upload />} /> */}
      
-    </Routes>
+    </Routes> 
+    
     </div>
-      
+    
     </div>
   )
 }
