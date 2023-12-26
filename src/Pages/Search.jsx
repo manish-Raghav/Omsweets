@@ -7,7 +7,7 @@ const Search = ({dta}) => {
      
   console.log("we are i dta file and we want add this");
   return (
-    <div className='w-96 h-96 pt-2 items-center overflow-hidden  flex  flex-col gap-2'>
+    <div className='w-96 h-96 pt-2 items-center overflow-hidden   flex  flex-col gap-2'>
     
       {
         dta.map((itm) =>{
