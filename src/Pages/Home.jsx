@@ -220,7 +220,6 @@ const Home = () => {
                 return (
                  
                   <Mycard
-                 
                     id={el._id}
                     name={el.Name}
                     catego={el.product_name}

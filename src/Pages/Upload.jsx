@@ -8,8 +8,8 @@ const Upload = () => {
       const[img,setimg] =  useState("");
       const[qnt ,setqnt] =  useState(0);
       const[ps,setps] = useState(0);
-      const[dscount,setsv] = useState("")
-      const[dsc ,setdsc] = useState("");
+      const[dscount,setsv] = useState(null)
+      const[dsc ,setdsc] = useState(null);
     
   const formdata= new FormData();
     formdata.append('pro',pro);
