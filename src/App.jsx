@@ -16,6 +16,8 @@ import { setDataProduct } from './reduxstore/productslice';
 import Header from './Components/Header/Header';
 import Login from './Pages/Login';
 import Authe from './Pages/Authe';
+import SearchData from './Pages/SearchData';
+
 
 // import Login from './Pages/Login'
 
@@ -58,12 +60,13 @@ function App() {
       <Route path="/Upload" element={<Upload/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/Cart" element={<Cart/>} />
+      <Route path='/searchdata' element={<SearchData />} />
     {/* <Route path="/Login" element={<Upload />} /> */}
      
     </Routes> 
     
     </div>
-    
+     
     </div>
   )
 }

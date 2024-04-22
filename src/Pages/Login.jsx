@@ -31,12 +31,18 @@ const Login = () => {
                 </h1>
                 <form className="mt-6">
                     <div className="mb-2">
+                    <div className='flex gap-4'>
                         <label
                             for="email"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Email
                         </label>
+                        <p className='text-sm text-red-500'>
+                    manishraghav@gmail.com
+                  </p>
+
+                  </div>
                         <input
                             type="email"
                             name='email'
@@ -45,12 +51,18 @@ const Login = () => {
                         />
                     </div>
                     <div className="mb-2">
-                        <label
+                           <div className='flex gap-4'>
+                           <label
                             for="password"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Password
                         </label>
+                                 <p className='text-sm text-red-500'>
+                               123456
+                                </p>
+                                  </div>
+                       
                         <input
                             type="password"
                             name='password'
@@ -58,12 +70,18 @@ const Login = () => {
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
+                    <div>
                     <a
                         href="#"
                         className="text-xs text-purple-600 hover:underline"
                     >
                         Forget Password?
                     </a>
+                    </div>
+                   
+                  
+
+                 
                     <div className="mt-6">
                         <button className="w-full px-4 py-2 tracking-wide text-slate-700 transition-colors duration-200 transform bg-yellow-400 rounded-md hover:bg-yellow-600 focus:outline-none focus:bg-purple-600"
                           onClick={log}>

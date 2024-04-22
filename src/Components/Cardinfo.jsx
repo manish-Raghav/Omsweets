@@ -25,14 +25,14 @@ const Cardinfo = ({data, id, name, img  ,cat, ps ,  quant, dis, desc}) => {
     <div className='bg-white'>
     <div className='fixed w-screen h-screen  bg-[#00000030] top-0 left-0 z-40 flex items-center justify-center'>
      <div className='w-[80%] 800px:w-[60%] h-[70vh] 800px:h-[75vh] border-[1px] border-black  bg-white rounded-md shadow-sm relative p-4'>
-          <RxCross1 size={30} className=' cursor-pointer absolute right-3 top-3 z-50 border-[1px] border-black rounded-2xl'
+          <RxCross1 size={30} className=' cursor-pointer absolute right-3 top-3 z-50 border-[1px] border-black hover:scale-105 rounded-2xl'
            onClick={()=>data(false)}
           />
        {/* // https://nice-pink-llama-cape.cyclic.app/uploads\6d6cb44a3dbc2585170b380d1a0913e6 */}
 
          <div className='flex flex-col md:flex-row md:justify-normal   sm:justify-center sm: items-center'>
             <div className='    relative bottom-4  '>
-                <img src={` https://nice-pink-llama-cape.cyclic.app/${img}`} alt='img' className='bg-cover mt-4 sm:w-[30wh] sm:h-[10vh] md:w-[18vw] md:h-[40vh]   rounded-md' />
+                <img src={` https://nice-pink-llama-cape.cyclic.app/${img}`} alt='img' className='bg-cover mt-4 sm:w-[30wh] sm:h-[10vh] md:w-[18vw] md:h-[40vh]  rounded-md' />
             </div>
 
             <div className='flex flex-col justify-center items-center '> 
@@ -60,7 +60,7 @@ const Cardinfo = ({data, id, name, img  ,cat, ps ,  quant, dis, desc}) => {
            
            </div>
 
-           <button className='bg-yellow-400 p-[1px] w-24 h-10 rounded-md  relative top-5 text-lg font-medium shadow-lg' onClick={myfun}>Add to cart</button>
+           <button className='bg-yellow-400 p-[1px] w-24 h-10 rounded-md  relative top-5 text-lg font-medium shadow-lg hover:scale-110' onClick={myfun}>Add to cart</button>
             </div>
          </div> 
      </div>

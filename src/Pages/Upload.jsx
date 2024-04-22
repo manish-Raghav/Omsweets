@@ -24,7 +24,7 @@ const Upload = () => {
     const myfun =()=>{
      
      // https://nice-pink-llama-cape.cyclic.app/give
-       axios.post(' http://localhost:4000/give',formdata)
+       axios.post('https://nice-pink-llama-cape.cyclic.app/give',formdata)
        .then((rs) =>{
         console.log('result is succsess',rs)
        })
@@ -93,3 +93,4 @@ const Upload = () => {
 }
 
 export default Upload
+  

@@ -12,7 +12,7 @@ import Footer from '../Components/Footer';
 
 const Sweet = () => {
   const [ast ,setast] = useState([]);
-
+  
   const swet = useSelector((stat) => stat.productcart.productList);
   useEffect(()=>{
     // axios.get('http://localhost:4000/all')

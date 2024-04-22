@@ -45,7 +45,9 @@ import { data } from 'autoprefixer';
     const fn =(e) =>{
 
       setdt(e);
-      setdta(mn.filter((itm) => itm.Name.toLowerCase().includes(e)) );  
+      const k = e.toLowerCase();
+      console.log(k);
+      setdta(mn.filter((itm) => itm.Name.toLowerCase().includes(k)) );  
      // console.log( "hry there  ==>" ,dta);
 
     }

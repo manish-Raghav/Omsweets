@@ -2,6 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react'
 
 import gv from '../assets/gv2.jpeg'
+import ad from '../assets/adv3.jpg'
+import ad2 from '../assets/adv4.jpg'
+import ad3 from '../assets/adv1.jpg'
 import Sweet from './Sweet';
 import Mycard from '../Components/Mycard';
 import { GrPrevious,GrNext } from 'react-icons/gr';
@@ -45,7 +48,7 @@ const Home = () => {
     //   setsw( setm.filter((item) => item.product_name ==="sweet" ))
     // },[])
    
-     //console.log(setm , "hey i am here look my side ---->");  
+     console.log(setm , "hey i am here look my side ---->");  
       
      
     
@@ -69,7 +72,7 @@ const Home = () => {
     
 
   return (
-    <div className='flex flex-col relative  h-screen '> 
+    <div className='flex flex-col relative  max-h-full '> 
      
      <div className='mt-[4.1rem] w-full'>
       <MainCarousel />
@@ -239,7 +242,35 @@ const Home = () => {
     {/* <div  className='relative w-full bottom-0 top-20 '>
        <Footer/>
        </div> */}
-      
+
+
+       <div className='flex h-[70vh] bg-[#f8ecd8] relative top-14'>
+       {/* <div>
+        <img src={ad} alt='ad' className='w-96'/>
+       </div> */}
+          
+       <div className='ml-36 mt-10'>
+        <img src={ad} alt='ad2' className='w-auto h-96'/>
+       </div>
+
+
+       <div className=' absolute right-96 top-10'>
+            <div className='text-3xl  font-bold  text-red-900'>
+            <h1>About Us</h1>
+
+            </div> 
+       </div>
+
+{/*           
+       <div>
+        <img src={ad3} alt='ad3' className='w-auto h-96'/>
+       </div> */}
+       </div>
+
+
+       <div className='mt-32'>
+        <Footer />
+       </div>
     </div>
     
   )
