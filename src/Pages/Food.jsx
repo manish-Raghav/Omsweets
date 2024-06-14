@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import Mycard from '../Components/Mycard';
-import Footer from '../Components/Footer';
+
 const Food = () => {
   const [ast ,setast] = useState([]);
 

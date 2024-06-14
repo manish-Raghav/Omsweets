@@ -32,7 +32,7 @@ const Cardinfo = ({data, id, name, img  ,cat, ps ,  quant, dis, desc}) => {
 
          <div className='flex flex-col md:flex-row md:justify-normal   sm:justify-center sm: items-center'>
             <div className='    relative bottom-4  '>
-                <img src={` https://nice-pink-llama-cape.cyclic.app/${img}`} alt='img' className='bg-cover mt-4 sm:w-[30wh] sm:h-[10vh] md:w-[18vw] md:h-[40vh]  rounded-md' />
+                <img src={`https://manish-omsweet-database.onrender.com/${img}`} alt='img' className='bg-cover mt-4 sm:w-[30wh] sm:h-[10vh] md:w-[18vw] md:h-[40vh]  rounded-md' />
             </div>
 
             <div className='flex flex-col justify-center items-center '> 

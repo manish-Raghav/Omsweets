@@ -6,6 +6,21 @@ export default {
   ],
 
   theme: {
+    extend: { 
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        hind:["Hind", 'sans-serif'],
+      },
+      fontWeight: {
+         smnormal:200,
+         snormal:300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+      },
+    },
     screens: {
       'sm': '200px',
       'md': '740px',
@@ -13,8 +28,10 @@ export default {
       'xl': '1280px',
       '2xl': '1536px',
     },
-    extend: {},
   },
+    
+
+   
   plugins: [
     require('tailwind-scrollbar'),
   ],

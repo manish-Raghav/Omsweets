@@ -10,13 +10,14 @@ import Chocolate from './Pages/Chocolate'
 import Upload from './Pages/Upload'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from './Pages/Cart'
-import Footer from './Components/Footer'
+
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataProduct } from './reduxstore/productslice';
 import Header from './Components/Header/Header';
 import Login from './Pages/Login';
 import Authe from './Pages/Authe';
-import SearchData from './Pages/SearchData';
+
+import CardData from './Components/CardData';
 
 
 // import Login from './Pages/Login'
@@ -33,10 +34,10 @@ function App() {
   // http://localhost:4000/all
   
   useEffect(()=>{
-    axios.get('https://nice-pink-llama-cape.cyclic.app/all')
+    axios.get('https://manish-omsweet-database.onrender.com/all')
     .then(res =>{
        usedisp(setDataProduct(res.data));
-        console.log(res.data);
+        // console.log(res.data);
       // setarr(res.data);
 
     })
@@ -60,8 +61,7 @@ function App() {
       <Route path="/Upload" element={<Upload/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/Cart" element={<Cart/>} />
-      <Route path='/searchdata' element={<SearchData />} />
-    {/* <Route path="/Login" element={<Upload />} /> */}
+      <Route path="/card" element={<CardData />} />
      
     </Routes> 
     

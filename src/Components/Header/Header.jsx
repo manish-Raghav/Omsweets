@@ -42,16 +42,17 @@ import { data } from 'autoprefixer';
    }
   
 
+
     const fn =(e) =>{
 
       setdt(e);
       const k = e.toLowerCase();
       console.log(k);
       setdta(mn.filter((itm) => itm.Name.toLowerCase().includes(k)) );  
-     // console.log( "hry there  ==>" ,dta);
+   
 
     }
-   //  const data= useSelector((stat) => stat.productcart.cartItem);
+ 
       return (
       <header className='fixed shadow-md w-screen h-16 md:px-4 z-50 bg-white border-2 border-green-800'>
          

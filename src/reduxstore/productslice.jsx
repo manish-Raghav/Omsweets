@@ -5,6 +5,7 @@ import { TbTextColor } from "react-icons/tb";
 const initialState = {
   productList: [],
   cartItem: [],
+  dtList:[],
 };
 
  const productSlice = createSlice({
@@ -12,6 +13,12 @@ const initialState = {
   initialState,
 
   reducers: {
+     
+    add:(state ,action) =>{
+      state.dtList= action.payload;   
+    },
+
+
     setDataProduct: (state, action) => {
       state.productList = [...action.payload];
     },
@@ -67,6 +74,7 @@ const initialState = {
 });
 
 export const {
+  add,
   setDataProduct,
   addCartItem,
   deleteCartItem,

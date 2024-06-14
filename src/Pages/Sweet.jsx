@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import Mycard from '../Components/Mycard';
-import Footer from '../Components/Footer';
+
 
 
 
@@ -13,6 +13,8 @@ import Footer from '../Components/Footer';
 const Sweet = () => {
   const [ast ,setast] = useState([]);
   
+  const [page,setpg] = useState(1);
+
   const swet = useSelector((stat) => stat.productcart.productList);
   useEffect(()=>{
     // axios.get('http://localhost:4000/all')
@@ -38,7 +40,7 @@ const Sweet = () => {
                     id={el._id}
                     name={el.Name}
                     catego={el.product_name}
-                    price={el.prise}
+                    price={el.price}
                     image={el.img1}
                     quant ={el.quantity}
                     discount = {el.discount}
