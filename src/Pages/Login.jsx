@@ -39,7 +39,7 @@ const Login = () => {
                             Email
                         </label>
                         <p className='text-sm text-red-500'>
-                    manishraghav@gmail.com
+                        abcd@gmail.com
                   </p>
 
                   </div>
