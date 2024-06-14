@@ -95,7 +95,7 @@ const Upload = () => {
       </div>
       </div>
 
-
+{/* 
       <form className="mt-6">
                     <div className="mb-2">
                     <div className='flex gap-4'>
@@ -175,7 +175,7 @@ const Upload = () => {
                             Login
                         </button>
                     </div>
-                </form>
+                </form> */}
     </div>
   )
 }
