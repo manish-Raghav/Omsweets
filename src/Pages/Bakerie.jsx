@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import Mycard from '../Components/Mycard';
 import MyFooter from '../Components/MyFooter';
-MyFooter
+import Loading from '../Components/Loading';
+
 const Bakerie = () => {
   const [ast ,setast] = useState([]);
   const [page,setpg] = useState(1);
@@ -27,8 +28,9 @@ const Bakerie = () => {
   // console.log(ast);
   return (
     <div className='flex flex-col  items-center    '> 
-    <div className='flex justify-center mt-20 sm:  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
+    <div className='flex justify-center mt-20 sm:  md:mx-8   gap-2 flex-wrap  md:max-w-full sm:w-auto '>
        {
+        ast.length<1  ? <div className=' flex justify-center items-center  mt-24'> <Loading /> </div>:
       ast.slice(page*10-10, page*10).map((el, index) => {
                 return (
                   <Mycard

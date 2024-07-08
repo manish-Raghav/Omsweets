@@ -24,6 +24,7 @@ import MyFooter from '../Components/MyFooter';
 
 import { propTypes } from 'react-bootstrap/esm/Image';
 import { PiNyTimesLogo } from 'react-icons/pi';
+import Loading from '../Components/Loading';
 
 
   
@@ -55,8 +56,9 @@ const Home = () => {
     const setm = useSelector((stm) =>stm.productcart.productList);
 
     const newproduct = setm.slice(setm.length-6,setm.length)
+    console.log('manishhshshshhshhshhshs ----->?' ,setm);
 
-       console.log('all data is here manish thakur -->' ,newproduct);
+       //console.log('all data is here manish thakur -->' ,newproduct);
 
     // useEffect(() =>{
     //   setsw( setm.filter((item) => item.product_name ==="sweet" ))
@@ -128,6 +130,7 @@ const Home = () => {
      </div>
      
      {
+      setm.length<1  ? <div className=' flex justify-center items-center  ml-[43vw]'> <Loading /> </div>:
       setm.map((el, index) => {
                 return (
                   <Mycard
@@ -181,6 +184,7 @@ const Home = () => {
      </div>
      </div>
      {
+      newproduct.length<1  ? <div className=' flex justify-center items-center  ml-[43vw]'> <Loading /> </div>:
      newproduct.map((el, index) => {
                 return (
                   <Mycard
@@ -232,6 +236,7 @@ const Home = () => {
      </div>
      </div>
      {
+      sw.length<1  ? <div className=' flex justify-center items-center  ml-[43vw]'> <Loading /> </div>:
      sw.map((el, index) => {
      
                 return (

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import Mycard from '../Components/Mycard';
+import Loading from '../Components/Loading';
+import MyFooter from '../Components/MyFooter';
+
 
 
 
@@ -28,10 +31,11 @@ const Sweet = () => {
   },[])
    
   return (
-    <div className='flex h-screen relative flex-col border-2 border-orange-700 max-w items-center    '> 
+    <div className='flex h-screen relative flex-col  max-w items-center    '> 
       
-       <div className='flex justify-center mt-20  md:mx-8 md:border-[1px] md:border-black  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
+       <div className='flex justify-center mt-20  md:mx-8  gap-2 flex-wrap  md:max-w-full sm:w-auto '>
        {
+       ast.length<1  ? <div className=' flex justify-center items-center  mt-24'> <Loading /> </div>:
       ast.map((el, index) => {
         
                 return (
@@ -50,9 +54,9 @@ const Sweet = () => {
               })
      }
        </div>
-       {/* <div  className='relative w-full bottom-0 top-20 '>
-       <Footer/>
-       </div> */}
+       <div className='mt-32 w-full'> 
+           <MyFooter />
+         </div>
     </div>
   )
 }

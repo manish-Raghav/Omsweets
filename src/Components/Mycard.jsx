@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
+
+  const [ld,setld]  = useState(true); 
 //{ id, name, image,catego, price , quant}
 
   // console.log("my name is  ->>",name);
@@ -69,9 +71,7 @@ const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
         <Card.Title>{name}</Card.Title>
         <div className='flex justify-between'>
         <div >
-        <h3>₹{price}</h3>
-       </div>
-       <div>
+        <h3>₹{price}</h3> 
         <h3>{ quant}</h3>
        </div>
        </div>
@@ -90,7 +90,7 @@ const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
      } */}
 
 
-
+       { id === undefined ? <div>  Please Wait Data is Fetching from Server </div> :
 
      <div className=' '> 
        <Card className=' md:w-56   hover:border-1  hover:border-solid  hover:border-black hover: cursor-pointer'   >
@@ -122,7 +122,7 @@ const Mycard = ({ id, name, image,catego, price , quant,discount,desc}) => {
       </Card.Body>
     </Card>
       </div> 
-
+       }
       {/* seopen={setopen} ope={open} */}
       {/* {
         open ? (
